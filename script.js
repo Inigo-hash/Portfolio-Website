@@ -39,3 +39,10 @@ if ('IntersectionObserver' in window) {
 }
 document.addEventListener('visibilitychange', updateMotion);
 updateMotion();
+
+/* Reset project disclosures on initial load and restored page visits. */
+function closeProjects() {
+  document.querySelectorAll(".project").forEach((project) => { project.open = false; });
+}
+closeProjects();
+window.addEventListener("pageshow", closeProjects);
