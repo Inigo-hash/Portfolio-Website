@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic metadata and local assets: no external fonts or runtime dependencies. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3e9">
+  <meta name="description" content="Iñigo Jose Agunod — a computer science student exploring Linux, AWS, and cloud infrastructure. Projects, skills, and certificates.">
+  <title>Iñigo Agunod — Cloud & Infrastructure</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Keyboard users can jump straight to the content. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header wrap">
+    <a class="brand" href="#home" aria-label="Iñigo Agunod, home">ia<span>✳</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#certificates">Certificates</a>
+    </nav>
+    <a class="button small" href="#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <!-- A CSS-only atmospheric graphic keeps the opening screen lightweight. -->
+    <section class="hero wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-top"><p class="eyebrow">IÑIGO JOSE AGUNOD / PERSONAL PORTFOLIO</p><span class="eyebrow location">BASED IN THE PHILIPPINES</span></div>
+      <div class="cloud-art" aria-hidden="true"><i></i><i></i><i></i><div class="orbit"></div></div>
+      <h1 id="hero-title">Curious mind.<br>Cloud<span class="serif"> ambitions.</span></h1>
+      <div class="hero-bottom"><p>I’m Iñigo, a computer science student drawn to Linux, servers, and the systems behind the screen.</p><a class="button" href="#projects">Explore my work <span aria-hidden="true">↘</span></a></div>
+      <div class="hero-caption"><span>LEARNING BY BUILDING</span><span>LINUX · AWS · INFRASTRUCTURE</span><a href="#about" aria-label="Scroll to about">SCROLL TO EXPLORE ↓</a></div>
+    </section>
+    <!-- About and skills describe current interests without claiming professional credentials. -->
+    <section class="about section wrap" id="about">
+      <p class="eyebrow">01 / THE PERSON BEHIND THE TERMINAL</p>
+      <div class="split"><h2>I like knowing<br>how things <em>work.</em></h2><div><p class="lead">Especially the parts you don’t see.</p><p>I’m a third-year college student working toward a future in cloud engineering and DevOps. I enjoy setting up Linux environments, exploring AWS, and understanding how infrastructure fits together.</p><p>My approach is simple: build it, understand it, then learn how to automate it. I’m developing those foundations through hands-on practice and collaborative school projects.</p><span class="note">Working toward Cloud / DevOps OJT in 2027</span></div></div>
+      <div class="skills"><article><span>01</span><h3>Linux & servers</h3><p>Daily exploration with CachyOS, the terminal, and system configuration.</p></article><article><span>02</span><h3>Cloud foundations</h3><p>Learning AWS through EC2, SSH access, and networking fundamentals.</p></article><article><span>03</span><h3>Building together</h3><p>Using Git and GitHub to collaborate, track changes, and improve projects.</p></article></div>
+    </section>
+    <!-- Native disclosure panels expose project details without a JavaScript component. -->
+    <section class="projects section" id="projects"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">02 / A FEW THINGS I’M WORKING ON</p><h2>Learning, <em>in practice.</em></h2></div><a class="text-link" href="https://github.com/Inigo-hash" target="_blank" rel="noopener noreferrer">My GitHub ↗</a></div>
+      <details class="project" open><summary><span class="project-no">01</span><div><h3>CodeBreak</h3><p>Learning programming through play</p></div><span class="tag">GROUP PROJECT</span><span class="plus" aria-hidden="true">+</span></summary><div class="project-body"><div class="terminal" aria-label="CodeBreak project topics"><span>codebreak / learning loop</span><p><b>01</b> explore the world</p><p><b>02</b> discover a topic</p><p><b>03</b> solve a challenge</p><p><b>04</b> unlock what’s next <i>_</i></p></div><div><p>A collaborative educational game combining exploration with programming challenges. My work has included progress tracking, topic guidance, assessments, and inventory interactions.</p><p class="eyebrow">PYTHON / GAME SYSTEMS / GIT</p><a class="text-link" href="https://github.com/Inigo-hash/CodeBreak" target="_blank" rel="noopener noreferrer">Explore repository ↗</a></div></div></details>
+      <details class="project"><summary><span class="project-no">02</span><div><h3>LogAegis</h3><p>A more trustworthy endpoint activity trail</p></div><span class="tag">THESIS · IN PROGRESS</span><span class="plus" aria-hidden="true">+</span></summary><div class="project-body"><div class="project-visual">Log<span>Æ</span>gis<small>ENDPOINT ACTIVITY / RECORD INTEGRITY</small></div><div><p>Our proposed thesis system explores tamper-evident endpoint activity monitoring for educational computer laboratories, with a central dashboard for incident review.</p><p>The planned design combines event collection, HMAC-linked records, and assessment of potentially malicious executables. The project is in its proposal and prototype stage.</p></div></div></details>
+      <details class="project"><summary><span class="project-no">03</span><div><h3>Cloud foundations</h3><p>From local terminal to a remote server</p></div><span class="tag">HANDS-ON PRACTICE</span><span class="plus" aria-hidden="true">+</span></summary><div class="project-body"><div class="terminal"><span>learning / infrastructure</span><p>$ chmod 400 portfolio-key.pem</p><p>$ ssh -i portfolio-key.pem …</p><p><b>Connected. Keep learning.</b></p></div><div><p>Practicing EC2 access, SSH keys, and security group configuration while building a stronger understanding of cloud infrastructure.</p><p>This is an ongoing learning track toward a more complete cloud and DevOps portfolio.</p></div></div></details>
+    </div></section>
+    <!-- Each certificate is a real uploaded document, with its actual award type. -->
+    <section class="certificates section wrap" id="certificates"><div class="section-heading"><div><p class="eyebrow">03 / ALWAYS A STUDENT</p><h2>Certificates<span class="serif"> & learning.</span></h2></div><p>Seminars attended, lessons completed,<br>and a little progress along the way.</p></div><p class="certificate-note">Participation, appreciation, and course completion certificates from my learning journey.</p>
+      <div class="certificate-grid">
+        <article class="certificate"><a class="certificate-image" href="assets/certificates/thesis.webp" data-certificate><img src="assets/certificates/thesis-thumb.webp" width="640" height="453" loading="lazy" decoding="async" alt="Certificate of participation awarded to Inigo Jose Agunod for Thesis: Far From Home"><span>View certificate ↗</span></a><div class="certificate-meta"><span>PARTICIPATION</span><time datetime="2026-08-29">AUG 2026</time></div><h3>Thesis: Far From Home</h3><p>Navigating Program-Specific Frontiers<br>UE–CCSS RND Unit</p></article>
+        <article class="certificate"><a class="certificate-image" href="assets/certificates/data-science.webp" data-certificate><img src="assets/certificates/data-science-thumb.webp" width="640" height="452" loading="lazy" decoding="async" alt="Certificate of appreciation for participation in A Day in a Life: An Inside Look on the Data Science Industry"><span>View certificate ↗</span></a><div class="certificate-meta"><span>APPRECIATION</span><time datetime="2026-03-17">MAR 2026</time></div><h3>A Day in a Life</h3><p>An Inside Look on the Data Science Industry<br>UE Manila · Data Science Society</p></article>
+        <article class="certificate"><a class="certificate-image" href="assets/certificates/codechum.webp" data-certificate><img src="assets/certificates/codechum-thumb.webp" width="640" height="494" loading="lazy" decoding="async" alt="CodeChum certificate of completion in C++ Object-Oriented Programming for Inigo Agunod"><span>View certificate ↗</span></a><div class="certificate-meta"><span>COURSE COMPLETION</span><time datetime="2025-10-21">OCT 2025</time></div><h3>C++ Object-Oriented Programming</h3><p>CCS 2102 · CodeChum</p></article>
+        <article class="certificate"><a class="certificate-image" href="assets/certificates/portfolio.webp" data-certificate><img src="assets/certificates/portfolio-thumb.webp" width="640" height="480" loading="lazy" decoding="async" alt="Certificate of participation for Iñigo Jose Agunod in Crafting Your Career: Portfolio Building 101"><span>View certificate ↗</span></a><div class="certificate-meta"><span>PARTICIPATION</span><time datetime="2025-03-11">MAR 2025</time></div><h3>Crafting Your Career</h3><p>Portfolio Building 101<br>CCSS Student Council</p></article>
+      </div>
+    </section>
+    <!-- Contact points to the supplied public profile until other contact details are provided. -->
+    <section class="contact section" id="contact"><div class="wrap"><p class="eyebrow">04 / WHAT’S NEXT?</p><h2>Good things start<br>with a <em>connection.</em></h2><div class="contact-bottom"><p>Have a project, an opportunity, or something<br>interesting to share? Find me on GitHub.</p><a class="button light" href="https://github.com/Inigo-hash" target="_blank" rel="noopener noreferrer">Let’s connect on GitHub ↗</a></div></div></section>
+  </main>
+  <footer class="wrap"><a class="brand" href="#home">ia<span>✳</span></a><p>© <span id="year">2026</span> Iñigo Jose Agunod</p><a href="#home">Back to top ↑</a></footer>
+  <!-- The native dialog supplies focus trapping and Escape-to-close behavior. -->
+  <dialog id="certificate-dialog" aria-labelledby="viewer-title"><div class="viewer-toolbar"><h2 id="viewer-title">Certificate</h2><form method="dialog"><button class="button small" aria-label="Close certificate viewer">Close ×</button></form></div><img id="certificate-full" alt=""><a id="certificate-original" class="text-link" target="_blank" rel="noopener noreferrer">Open full-size image ↗</a></dialog>
+</body>
+</html>
