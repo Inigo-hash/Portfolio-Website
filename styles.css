@@ -32,3 +32,11 @@ dialog{width:min(1100px,94vw);max-height:92vh;border:0;border-radius:14px;paddin
 .header nav a:active{background:#405438}
 @media(max-width:760px){.header{flex-wrap:wrap}.header nav{gap:8px}.header nav a{padding:10px 14px}}
 @media(prefers-reduced-motion:reduce){.header nav a{transition:none}}
+
+/* Matching contact buttons and a larger footer control make every link clear. */
+.social-links{gap:12px;flex-wrap:wrap}
+.social-links .button{min-height:48px;min-width:120px}
+footer .brand-name{font-size:clamp(14px,2vw,22px);letter-spacing:-.04em;white-space:nowrap}
+footer a.back-to-top{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;font-size:14px;font-weight:500;border:1px solid #87967b;border-radius:999px;background:#e7eadc;transition:background .18s,color .18s}
+footer a.back-to-top:hover,footer a.back-to-top:focus-visible{background:var(--ink);color:var(--paper)}
+@media(prefers-reduced-motion:reduce){footer a.back-to-top{transition:none}}
