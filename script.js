@@ -3,19 +3,50 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 
 /* Enhance ordinary image links with a keyboard-accessible native dialog. */
 const dialog = document.querySelector('#certificate-dialog');
-const fullImage = document.querySelector('#certificate-full');
+let fullImage = document.querySelector('#certificate-full');
 const originalLink = document.querySelector('#certificate-original');
 if (typeof dialog.showModal === 'function') {
+  // Announce loading and failures without leaving the previous certificate visible.
+  const status = document.createElement('p');
+  status.setAttribute('role', 'status');
+  fullImage.before(status);
   document.querySelectorAll('[data-certificate]').forEach((link) => {
     link.addEventListener('click', (event) => {
       // Preserve normal browser behavior for opening a link in another tab.
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
-      fullImage.src = link.href;
-      fullImage.alt = link.querySelector('img').alt;
+      // A fresh image prevents the browser from painting the previous document.
+      const nextImage = new Image();
+      nextImage.id = 'certificate-full';
+      nextImage.alt = link.querySelector('img').alt;
+      nextImage.style.display = 'none';
+      fullImage.replaceWith(nextImage);
+      fullImage = nextImage;
+      status.textContent = 'Loading certificate…';
       originalLink.href = link.href;
+
+      // Ignore late results after closing or switching to another certificate.
+      nextImage.onload = () => {
+        if (fullImage !== nextImage || !dialog.open) return;
+        nextImage.style.display = 'block';
+        status.textContent = '';
+      };
+      nextImage.onerror = () => {
+        if (fullImage !== nextImage || !dialog.open) return;
+        status.textContent = 'Could not load the certificate. Try the full-size image link below.';
+      };
       dialog.showModal();
+      nextImage.src = link.href;
     });
+  });
+  // Release the previous image when the viewer closes.
+  dialog.addEventListener('close', () => {
+    if (dialog.open) return;
+    fullImage.onload = null;
+    fullImage.onerror = null;
+    fullImage.style.display = 'none';
+    fullImage.removeAttribute('src');
+    status.textContent = '';
   });
   // Clicking outside the modal content closes it, as does the native Escape key.
   dialog.addEventListener('click', (event) => {
