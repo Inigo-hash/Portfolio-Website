@@ -70,3 +70,16 @@ footer a.back-to-top:hover,footer a.back-to-top:focus-visible{background:var(--i
 .profile-project-grid h3{font-size:25px;margin:18px 0 12px}.profile-project-grid p{font-size:14px;color:var(--muted)}
 @media(max-width:900px){.header{flex-wrap:wrap}.profile-columns{grid-template-columns:1fr}}
 @media(max-width:600px){.profile-page{padding-block:30px}.profile-intro{flex-direction:column;align-items:flex-start;gap:24px;padding-top:15px}.profile-photo{width:150px;height:150px}.profile-panel{padding:24px}.profile-project-grid{grid-template-columns:1fr}.profile-actions{gap:18px}.profile-intro .profile-subtitle{font-size:16px}.skill-rating{flex-wrap:wrap}.profile-about{padding-block:45px}}
+
+/* Profile contact links share an understated default and a green interactive state. */
+.profile-actions{gap:12px}
+.profile-actions .text-link{padding:12px 18px;min-height:44px;border:1px solid transparent;border-bottom-color:var(--ink);border-radius:0;transition:background .18s,color .18s,border-color .18s}
+.profile-actions .text-link:hover,.profile-actions .text-link:focus-visible{background:var(--ink);color:var(--paper);border-color:var(--ink);border-radius:24px}
+.profile-about>p:not(.eyebrow){color:var(--muted);max-width:650px}
+/* The homepage closes with a clear route to the detailed profile. */
+.profile-invitation{display:flex;align-items:center;justify-content:space-between;gap:36px;padding-block:65px}
+.profile-invitation h2{font-size:clamp(2rem,4vw,3.5rem);margin-bottom:18px}
+.profile-invitation p:last-child{color:var(--muted);margin-bottom:0}
+.profile-invitation>.button{flex-shrink:0}
+@media(max-width:760px){.profile-invitation{flex-direction:column;align-items:flex-start}.profile-project-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.profile-actions .text-link{transition:none}}

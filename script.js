@@ -1,11 +1,12 @@
 /* Keep the footer current without changing the rest of the static page. */
-document.querySelector('#year').textContent = new Date().getFullYear();
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
 
 /* Enhance ordinary image links with a keyboard-accessible native dialog. */
 const dialog = document.querySelector('#certificate-dialog');
 let fullImage = document.querySelector('#certificate-full');
 const originalLink = document.querySelector('#certificate-original');
-if (typeof dialog.showModal === 'function') {
+if (dialog && typeof dialog.showModal === 'function') {
   // Announce loading and failures without leaving the previous certificate visible.
   const status = document.createElement('p');
   status.setAttribute('role', 'status');
@@ -59,9 +60,9 @@ if (typeof dialog.showModal === 'function') {
 const hero = document.querySelector('.hero');
 let heroVisible = true;
 function updateMotion() {
-  hero.classList.toggle('motion-paused', !heroVisible || document.hidden);
+  hero?.classList.toggle('motion-paused', !heroVisible || document.hidden);
 }
-if ('IntersectionObserver' in window) {
+if (hero && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver(([entry]) => {
     heroVisible = entry.isIntersecting;
     updateMotion();
